@@ -201,14 +201,14 @@
   .zoom::backdrop { background: rgba(0, 0, 0, .85); }
   .zoom img { display: block; max-width: 95vw; max-height: 90vh; border-radius: 6px; cursor: zoom-out; }
   .zoom-fechar { position: absolute; top: 8px; right: 8px; background: #000a; color: #fff; border: 0; border-radius: 50%; width: 36px; height: 36px; font-size: 22px; cursor: pointer; }
-  .grade-editor figure img { cursor: zoom-in; }
+  .captura img, .grade-editor figure img { cursor: zoom-in; }
 </style>
 
 <script>
   const zoom = document.getElementById('zoom');
   const zoomImg = document.getElementById('zoom-img');
 
-  document.querySelectorAll('.grade-editor figure img').forEach(img => {
+  document.querySelectorAll('.captura img, .grade-editor figure img').forEach(img => {
     img.addEventListener('click', () => {
       zoomImg.src = img.src;
       zoomImg.alt = img.alt;

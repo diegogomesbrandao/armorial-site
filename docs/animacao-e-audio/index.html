@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Animação, cutscenes e áudio · Documentação do Armorial</title>
+<meta name="description" content="Animador, linha do tempo, cutscenes e música adaptativa.">
+<link rel="canonical" href="https://armorial.enginebr.workers.dev/docs/animacao-e-audio/">
+<meta property="og:title" content="Animação, cutscenes e áudio · Documentação do Armorial">
+<meta property="og:description" content="Animador, linha do tempo, cutscenes e música adaptativa.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/assets/img/logo-icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body class="">
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="/" aria-label="Armorial, página inicial"><img src="/assets/img/logo-completo.png" width="463" height="117" alt="Armorial" class="logo-cabecalho"></a>
+    <nav aria-label="Principal">
+      <ul class="menu"><li><a href="/ferramenta/">Ferramenta</a></li><li><a href="/download/">Download</a></li><li><a href="/docs/" aria-current="page">Documentação</a></li><li><a href="/galeria/">Galeria</a></li><li><a href="/noticias/">Notícias</a></li><li><a href="/contato/">Contato</a></li></ul>
+    </nav>
+    <a class="btn btn-sm" href="/download/">Baixar</a>
+  </div>
+</header>
+<main id="principal">
+
+<div class="doc wrap">
+  <aside class="doc-lateral" aria-label="Seções da documentação">
+    <label class="busca-rotulo" for="busca">Buscar na documentação</label>
+    <input id="busca" class="busca" type="search" placeholder="Ex.: Somar, Moedas, Pular" autocomplete="off" data-busca-url="/busca.json">
+    <ul class="resultados" id="resultados" hidden></ul>
+    <p class="sumario-titulo"><a href="/docs/">Documentação</a></p>
+    <nav aria-label="Sumário">
+      <ol class="sumario"><li><a href="/docs/visao-geral/">Visão geral e primeiros passos</a></li><li><a href="/docs/conceitos/">Conceitos fundamentais e interface</a></li><li><a href="/docs/comportamentos/">Comportamentos prontos</a></li><li><a href="/docs/regras/">Como as regras funcionam</a></li><li><a href="/docs/gatilhos/">Referência de gatilhos</a></li><li><a href="/docs/condicoes/">Referência de condições</a></li><li><a href="/docs/acoes/">Referência de ações</a></li><li><a href="/docs/valores-e-variaveis/">Valores, alvos e variáveis</a></li><li><a href="/docs/animacao-e-audio/" aria-current="page">Animação, cutscenes e áudio</a></li><li><a href="/docs/modelos/">Modelos prontos</a></li><li><a href="/docs/jogar-e-exportar/">Jogar, exportar e arquivos</a></li><li><a href="/docs/glossario/">Glossário</a></li><li><a href="/docs/pontos-a-confirmar/">Pontos a confirmar</a></li></ol>
+    </nav>
+  </aside>
+  <article class="doc-texto">
+    <p class="migalhas"><a href="/docs/">Documentação</a> / Animação, cutscenes e áudio</p>
+    <h1>Animação, cutscenes e áudio</h1>
+    <h2 id='animacao-e-cutscenes'>14. Animação e cutscenes</h2><p>A animação do Armorial tem três partes que trabalham juntas.</p><p>O Animador é uma máquina de estados para personagens. Cada estado toca uma animação, em loop ou não, com velocidade própria, e pode ter um papel: repouso, andar, correr, pular, morrer e outros. As transições ligam um estado a outro, com condições e um tempo de mistura. Os parâmetros podem ser de três tipos: decimal (como velocidade), sim/não (como no chão, morto ou venceu) e gatilho (como golpe, dano ou pegar), que vale uma vez. Alguns parâmetros podem receber dados do personagem automaticamente, como velocidade, velocidade para cima, se está no chão, ataque e dano.</p><p>A Linha do tempo cria animações próprias, em clipes com duração, loop e reprodução automática. Cada clipe tem trilhas, que são propriedades animadas como o quadro de um sprite ou a posição de um objeto. Cada trilha tem quadros-chave, com tempo, valor e jeito de transição: linear, suave, acelerando, freando, elástico, quicando ou degrau. Os clipes também têm marcas, que disparam o gatilho A animação chegou na marca. Por isso, um golpe pode causar dano exatamente no instante em que a espada desce.</p><p>A Cutscene é uma cena de cinema, feita de uma sequência com marcas no tempo. Ela pode ser tocada pelo bloco Tocar cutscene, pulada pelo bloco Pular cutscene e acompanhada pelos gatilhos Cutscene acabou e A cutscene chegou na marca. A condição Cutscene está tocando permite bloquear controles ou esconder o placar durante a cena.</p><h2 id='audio-adaptativo'>15. Áudio adaptativo</h2><p>O Áudio do Armorial separa três coisas: sons simples, música que muda com o jogo e o mixer que controla os volumes.</p><p>Para sons simples, use o bloco Tocar som, com volume e repetição. Para sons saindo de um objeto, use Tocar som no objeto, que fica mais baixo conforme o jogador se afasta e vem do lado de onde o objeto está.</p><p>A música adaptativa é montada assim:</p><ul><li>Parâmetros são valores de 0 a 1, como Progresso (quanto o jogador avançou) e Perigo (quão perto está uma ameaça). Eles são alterados pelo bloco Mudar parâmetro de áudio, e a música acompanha suavemente, em tempo configurável.</li><li>Seções são partes da música, como Exploração, Perseguição e Reta final, cada uma com seu jeito de tocar.</li><li>Transições ligam uma seção a outra quando um parâmetro entra numa faixa de valores. A troca pode acontecer na hora, no próximo tempo ou no próximo compasso, o que evita cortes fora do ritmo.</li><li>Camadas são trilhas que tocam juntas e em loop. Cada camada pode entrar conforme um parâmetro, por exemplo, um ritmo que começa a tocar quando o progresso passa de 10% e fica completo em 30%.</li><li>Snapshots são estados do mixer, como abafar a música, baixar o volume de um grupo, aplicar passa-baixa e reverb. Eles são ligados e desligados pelos blocos de snapshot, com transição suave.</li><li>Grupos (barramentos) do mixer, como Música e Efeitos, têm volume próprio, e podem ser silenciados ou ajustados aos poucos.</li></ul><p>O modelo Áudio Adaptativo mostra o uso completo: a música começa com o jogo; a camada de tensão entra quando o robô persegue o jogador; as camadas de ritmo e melodia entram conforme as moedas são pegas; e no fim a música sai aos poucos, dando lugar ao evento de vitória ou de derrota. A aba Áudio tem um tutorial de 10 passos para montar uma música assim.</p>
+  </article>
+</div>
+</main>
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <p class="rodape-marca"><img src="/assets/img/logo-icone.png" width="28" height="28" alt="" aria-hidden="true"> <strong>Armorial</strong> versão 0.1.146. Editor de jogos com programação visual, feito para o ensino técnico.</p>
+    <p>Mantido por Diego Brandão. <a href="/privacidade/">Privacidade e LGPD</a> · <a href="/contato/">Contato</a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

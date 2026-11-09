@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visão geral e primeiros passos · Documentação do Armorial</title>
+<meta name="description" content="O que é o Armorial e a tela inicial.">
+<link rel="canonical" href="https://armorial.enginebr.workers.dev/docs/visao-geral/">
+<meta property="og:title" content="Visão geral e primeiros passos · Documentação do Armorial">
+<meta property="og:description" content="O que é o Armorial e a tela inicial.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/assets/img/logo-icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body class="">
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="/" aria-label="Armorial, página inicial"><img src="/assets/img/logo-completo.png" width="463" height="117" alt="Armorial" class="logo-cabecalho"></a>
+    <nav aria-label="Principal">
+      <ul class="menu"><li><a href="/ferramenta/">Ferramenta</a></li><li><a href="/download/">Download</a></li><li><a href="/docs/" aria-current="page">Documentação</a></li><li><a href="/galeria/">Galeria</a></li><li><a href="/noticias/">Notícias</a></li><li><a href="/contato/">Contato</a></li></ul>
+    </nav>
+    <a class="btn btn-sm" href="/download/">Baixar</a>
+  </div>
+</header>
+<main id="principal">
+
+<div class="doc wrap">
+  <aside class="doc-lateral" aria-label="Seções da documentação">
+    <label class="busca-rotulo" for="busca">Buscar na documentação</label>
+    <input id="busca" class="busca" type="search" placeholder="Ex.: Somar, Moedas, Pular" autocomplete="off" data-busca-url="/busca.json">
+    <ul class="resultados" id="resultados" hidden></ul>
+    <p class="sumario-titulo"><a href="/docs/">Documentação</a></p>
+    <nav aria-label="Sumário">
+      <ol class="sumario"><li><a href="/docs/visao-geral/" aria-current="page">Visão geral e primeiros passos</a></li><li><a href="/docs/conceitos/">Conceitos fundamentais e interface</a></li><li><a href="/docs/comportamentos/">Comportamentos prontos</a></li><li><a href="/docs/regras/">Como as regras funcionam</a></li><li><a href="/docs/gatilhos/">Referência de gatilhos</a></li><li><a href="/docs/condicoes/">Referência de condições</a></li><li><a href="/docs/acoes/">Referência de ações</a></li><li><a href="/docs/valores-e-variaveis/">Valores, alvos e variáveis</a></li><li><a href="/docs/animacao-e-audio/">Animação, cutscenes e áudio</a></li><li><a href="/docs/modelos/">Modelos prontos</a></li><li><a href="/docs/jogar-e-exportar/">Jogar, exportar e arquivos</a></li><li><a href="/docs/glossario/">Glossário</a></li><li><a href="/docs/pontos-a-confirmar/">Pontos a confirmar</a></li></ol>
+    </nav>
+  </aside>
+  <article class="doc-texto">
+    <p class="migalhas"><a href="/docs/">Documentação</a> / Visão geral e primeiros passos</p>
+    <h1>Visão geral e primeiros passos</h1>
+    <h2 id='visao-geral'>1. Visão geral</h2><p>O Armorial é um editor de jogos feito para o ensino técnico em multimídia e design. Quem usa não escreve código: monta regras com blocos, no formato “quando isto acontece, faça aquilo”. Com ele dá para criar jogos 2D (plataforma, tiro, corrida, voo) e 3D (primeira pessoa, plataforma, kart, defesa com torres). O resultado final sai como um único arquivo HTML que roda sem internet.</p><p>O aplicativo é um programa para Windows feito com Tauri 2 (Rust com interface web). A parte gráfica e de física usa Babylon.js, cujos módulos aparecem no pacote. As regras do Armorial, porém, têm formato próprio, baseado em planilhas de eventos com nomes em português.</p><h2 id='primeiros-passos'>2. Primeiros passos</h2><p>A tela inicial tem três abas: Início, Projetos e Modelos.</p><ul><li>Continuar de onde parei: reabre o último projeto trabalhado.</li><li>Novo projeto: cria um projeto em branco.</li><li>Projetos: lista os projetos salvos, com pesquisa, favoritos e opção de remover da lista.</li><li>Modelos: jogos prontos para começar (ver seção 16). Tudo pode ser mudado depois.</li></ul><p>O texto de ajuda do próprio editor sugere este primeiro caminho: abra um modelo em Modelos, aperte Jogar e depois mude uma regra na aba Eventos.</p><p>Arquivos aceitos: imagens para sprites e texturas (PNG nos modelos prontos), modelos 3D no formato .glb (o editor orienta exportar do Blender como glTF 2.0 .glb) e sons em .mp3, .wav ou .ogg.</p>
+  </article>
+</div>
+</main>
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <p class="rodape-marca"><img src="/assets/img/logo-icone.png" width="28" height="28" alt="" aria-hidden="true"> <strong>Armorial</strong> versão 0.1.146. Editor de jogos com programação visual, feito para o ensino técnico.</p>
+    <p>Mantido por Diego Brandão. <a href="/privacidade/">Privacidade e LGPD</a> · <a href="/contato/">Contato</a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

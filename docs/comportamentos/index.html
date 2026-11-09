@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comportamentos prontos · Documentação do Armorial</title>
+<meta name="description" content="Os 20 comportamentos de movimento que se colocam num objeto.">
+<link rel="canonical" href="https://armorial.enginebr.workers.dev/docs/comportamentos/">
+<meta property="og:title" content="Comportamentos prontos · Documentação do Armorial">
+<meta property="og:description" content="Os 20 comportamentos de movimento que se colocam num objeto.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/assets/img/logo-icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body class="">
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="/" aria-label="Armorial, página inicial"><img src="/assets/img/logo-completo.png" width="463" height="117" alt="Armorial" class="logo-cabecalho"></a>
+    <nav aria-label="Principal">
+      <ul class="menu"><li><a href="/ferramenta/">Ferramenta</a></li><li><a href="/download/">Download</a></li><li><a href="/docs/" aria-current="page">Documentação</a></li><li><a href="/galeria/">Galeria</a></li><li><a href="/noticias/">Notícias</a></li><li><a href="/contato/">Contato</a></li></ul>
+    </nav>
+    <a class="btn btn-sm" href="/download/">Baixar</a>
+  </div>
+</header>
+<main id="principal">
+
+<div class="doc wrap">
+  <aside class="doc-lateral" aria-label="Seções da documentação">
+    <label class="busca-rotulo" for="busca">Buscar na documentação</label>
+    <input id="busca" class="busca" type="search" placeholder="Ex.: Somar, Moedas, Pular" autocomplete="off" data-busca-url="/busca.json">
+    <ul class="resultados" id="resultados" hidden></ul>
+    <p class="sumario-titulo"><a href="/docs/">Documentação</a></p>
+    <nav aria-label="Sumário">
+      <ol class="sumario"><li><a href="/docs/visao-geral/">Visão geral e primeiros passos</a></li><li><a href="/docs/conceitos/">Conceitos fundamentais e interface</a></li><li><a href="/docs/comportamentos/" aria-current="page">Comportamentos prontos</a></li><li><a href="/docs/regras/">Como as regras funcionam</a></li><li><a href="/docs/gatilhos/">Referência de gatilhos</a></li><li><a href="/docs/condicoes/">Referência de condições</a></li><li><a href="/docs/acoes/">Referência de ações</a></li><li><a href="/docs/valores-e-variaveis/">Valores, alvos e variáveis</a></li><li><a href="/docs/animacao-e-audio/">Animação, cutscenes e áudio</a></li><li><a href="/docs/modelos/">Modelos prontos</a></li><li><a href="/docs/jogar-e-exportar/">Jogar, exportar e arquivos</a></li><li><a href="/docs/glossario/">Glossário</a></li><li><a href="/docs/pontos-a-confirmar/">Pontos a confirmar</a></li></ol>
+    </nav>
+  </aside>
+  <article class="doc-texto">
+    <p class="migalhas"><a href="/docs/">Documentação</a> / Comportamentos prontos</p>
+    <h1>Comportamentos prontos</h1>
+    <p>Cada comportamento é um pacote de movimento que se coloca num objeto. Os ajustes ficam no próprio componente, e algumas ações (como Mudar ajuste do comportamento) os alteram durante o jogo.</p><p>Nota: os identificadores acima são os nomes usados no arquivo do projeto (campo behaviorId). Os ajustes de cada comportamento, como velocidade e alcance, aparecem no próprio componente Comportamento.</p><article class="item" id="kart"><h2>Kart</h2><p><span class="ident">kart</span></p><p>Acelera, freia, vira e derrapa com as teclas, como num jogo de corrida.</p></article><article class="item" id="personagem-de-plataforma"><h2>Personagem de plataforma</h2><p><span class="ident">platformer</span></p><p>Anda nas 4 direções e pula (com pulo duplo, se configurado).</p></article><article class="item" id="top-down-visto-de-cima"><h2>Top-Down (visto de cima)</h2><p><span class="ident">topdown</span></p><p>Anda em 8 direções vendo de cima e dá arrancada.</p></article><article class="item" id="top-down-2d-8-direcoes"><h2>Top-Down 2D (8 direções)</h2><p><span class="ident">topdown2d</span></p><p>Anda em 8 direções vendo de cima, sem gravidade. Bom para aventura 2D.</p></article><article class="item" id="corredor-automatico"><h2>Corredor automático</h2><p><span class="ident">autorun</span></p><p>Anda sozinho para a frente, cada vez mais rápido. Você só pula ou bate asas. Serve para corrida infinita e voo.</p></article><article class="item" id="primeira-pessoa-fps"><h2>Primeira pessoa (FPS)</h2><p><span class="ident">fps</span></p><p>Olha com o mouse, anda com WASD e pula. Coloque uma câmera na altura dos olhos.</p></article><article class="item" id="lutador"><h2>Lutador</h2><p><span class="ident">brawler</span></p><p>Anda e dá soco que derruba. Pode ser jogador 1, jogador 2 ou o computador.</p></article><article class="item" id="brigao"><h2>Brigão</h2><p><span class="ident">brigao</span></p><p>Briga de rua: anda, pula, dá combo de 3 golpes (o terceiro derruba) e voadora no ar.</p></article><article class="item" id="inimigo"><h2>Inimigo</h2><p><span class="ident">enemy</span></p><p>Percebe quem chega perto, persegue e ataca. Pode patrulhar, voar e avisar antes de atacar.</p></article><article class="item" id="patrulheiro"><h2>Patrulheiro</h2><p><span class="ident">patrulheiro</span></p><p>Patrulha, persegue quando vê o jogador, ataca de perto e recua por um instante.</p></article><article class="item" id="chefe-em-2-fases"><h2>Chefe em 2 fases</h2><p><span class="ident">chefe</span></p><p>Como o patrulheiro, mas com vida abaixo de 50% entra em fúria e ataca sem parar.</p></article><article class="item" id="projetil"><h2>Projétil</h2><p><span class="ident">projectile</span></p><p>Bala, flecha ou bola de fogo. Voa reto, não acerta quem atirou e some ao acertar ou com o tempo.</p></article><article class="item" id="dar-a-volta"><h2>Dar a volta</h2><p><span class="ident">wrap</span></p><p>Saiu por um lado da área, volta pelo outro. Serve para naves e fundos que se repetem.</p></article><article class="item" id="restrito-a-area"><h2>Restrito à área</h2><p><span class="ident">bound</span></p><p>Impede o objeto de sair de uma área. Útil para manter o herói dentro da fase.</p></article><article class="item" id="parallax-fundo-em-camadas"><h2>Parallax (fundo em camadas)</h2><p><span class="ident">parallax</span></p><p>Anda junto com a câmera só em parte: fica fixo na tela (céu), anda devagar (fundo distante) ou acompanha o cenário.</p></article><article class="item" id="girar-sempre"><h2>Girar sempre</h2><p><span class="ident">spin</span></p><p>Gira sem parar em volta de um eixo. Serve para moedas e hélices.</p></article><article class="item" id="balancar-vai-e-volta"><h2>Balançar (vai e volta)</h2><p><span class="ident">sine</span></p><p>Sobe e desce, vai de um lado a outro ou pulsa sem parar.</p></article><article class="item" id="orbitar"><h2>Orbitar</h2><p><span class="ident">orbit</span></p><p>Gira em torno de um objeto ou do lugar onde começou.</p></article><article class="item" id="aparecer-ou-sumir-aos-poucos"><h2>Aparecer ou sumir aos poucos</h2><p><span class="ident">fade</span></p><p>Fica transparente aos poucos e some, ou aparece devagar.</p></article><article class="item" id="some-se-sair-da-area"><h2>Some se sair da área</h2><p><span class="ident">destroyOutside</span></p><p>Destrói o objeto quando ele cai do mapa ou vai longe demais.</p></article>
+  </article>
+</div>
+</main>
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <p class="rodape-marca"><img src="/assets/img/logo-icone.png" width="28" height="28" alt="" aria-hidden="true"> <strong>Armorial</strong> versão 0.1.146. Editor de jogos com programação visual, feito para o ensino técnico.</p>
+    <p>Mantido por Diego Brandão. <a href="/privacidade/">Privacidade e LGPD</a> · <a href="/contato/">Contato</a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

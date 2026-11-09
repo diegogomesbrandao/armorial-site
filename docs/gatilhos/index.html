@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referência de gatilhos · Documentação do Armorial</title>
+<meta name="description" content="Blocos que passam uma vez, no instante em que algo acontece.">
+<link rel="canonical" href="https://armorial.enginebr.workers.dev/docs/gatilhos/">
+<meta property="og:title" content="Referência de gatilhos · Documentação do Armorial">
+<meta property="og:description" content="Blocos que passam uma vez, no instante em que algo acontece.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/assets/img/logo-icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body class="">
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="/" aria-label="Armorial, página inicial"><img src="/assets/img/logo-completo.png" width="463" height="117" alt="Armorial" class="logo-cabecalho"></a>
+    <nav aria-label="Principal">
+      <ul class="menu"><li><a href="/ferramenta/">Ferramenta</a></li><li><a href="/download/">Download</a></li><li><a href="/docs/" aria-current="page">Documentação</a></li><li><a href="/galeria/">Galeria</a></li><li><a href="/noticias/">Notícias</a></li><li><a href="/contato/">Contato</a></li></ul>
+    </nav>
+    <a class="btn btn-sm" href="/download/">Baixar</a>
+  </div>
+</header>
+<main id="principal">
+
+<div class="doc wrap">
+  <aside class="doc-lateral" aria-label="Seções da documentação">
+    <label class="busca-rotulo" for="busca">Buscar na documentação</label>
+    <input id="busca" class="busca" type="search" placeholder="Ex.: Somar, Moedas, Pular" autocomplete="off" data-busca-url="/busca.json">
+    <ul class="resultados" id="resultados" hidden></ul>
+    <p class="sumario-titulo"><a href="/docs/">Documentação</a></p>
+    <nav aria-label="Sumário">
+      <ol class="sumario"><li><a href="/docs/visao-geral/">Visão geral e primeiros passos</a></li><li><a href="/docs/conceitos/">Conceitos fundamentais e interface</a></li><li><a href="/docs/comportamentos/">Comportamentos prontos</a></li><li><a href="/docs/regras/">Como as regras funcionam</a></li><li><a href="/docs/gatilhos/" aria-current="page">Referência de gatilhos</a></li><li><a href="/docs/condicoes/">Referência de condições</a></li><li><a href="/docs/acoes/">Referência de ações</a></li><li><a href="/docs/valores-e-variaveis/">Valores, alvos e variáveis</a></li><li><a href="/docs/animacao-e-audio/">Animação, cutscenes e áudio</a></li><li><a href="/docs/modelos/">Modelos prontos</a></li><li><a href="/docs/jogar-e-exportar/">Jogar, exportar e arquivos</a></li><li><a href="/docs/glossario/">Glossário</a></li><li><a href="/docs/pontos-a-confirmar/">Pontos a confirmar</a></li></ol>
+    </nav>
+  </aside>
+  <article class="doc-texto">
+    <p class="migalhas"><a href="/docs/">Documentação</a> / Referência de gatilhos</p>
+    <h1>Referência de gatilhos</h1>
+    <p>Gatilhos são o primeiro bloco de um evento. Eles passam uma vez, no instante em que o fato acontece. Os parâmetros aparecem entre parênteses quando existem.</p><article class="item" id="quando-comeca"><h2>Quando começa</h2><p><strong>Quando passa:</strong> Uma vez, quando a cena começa ou quando nasce uma cópia do molde.</p><p><strong>Parâmetros e exemplo:</strong> Preparar o jogo, tocar a música, criar os primeiros inimigos.</p></article><article class="item" id="depois-de-n-segundos"><h2>Depois de N segundos</h2><p><strong>Quando passa:</strong> Uma vez, N segundos depois que o evento começa a valer.</p><p><strong>Parâmetros e exemplo:</strong> Segundos (de 0,05 a 3600; padrão 1). Fechar uma mensagem depois de 3 segundos.</p></article><article class="item" id="a-cada-n-segundos"><h2>A cada N segundos</h2><p><strong>Quando passa:</strong> De N em N segundos.</p><p><strong>Parâmetros e exemplo:</strong> Segundos (de 0,05 a 3600; padrão 1). Criar um inimigo a cada 3 segundos.</p></article><article class="item" id="comecou-a-encostar-em"><h2>Começou a encostar em</h2><p><strong>Quando passa:</strong> Quando dois objetos começam a se encostar.</p><p><strong>Parâmetros e exemplo:</strong> Alvo e com quem (tag ou objeto). Pegar moedas, cruzar a linha de chegada.</p></article><article class="item" id="parou-de-encostar-em"><h2>Parou de encostar em</h2><p><strong>Quando passa:</strong> Quando dois objetos deixam de se encostar.</p><p><strong>Parâmetros e exemplo:</strong> Alvo e com quem. Fechar a porta quando o jogador sai da sala.</p></article><article class="item" id="botao-foi-apertado"><h2>Botão foi apertado</h2><p><strong>Quando passa:</strong> No instante em que o botão é apertado.</p><p><strong>Parâmetros e exemplo:</strong> Botão (entrada). Pular, atirar, pausar.</p></article><article class="item" id="botao-foi-solto"><h2>Botão foi solto</h2><p><strong>Quando passa:</strong> No instante em que o botão é solto.</p><p><strong>Parâmetros e exemplo:</strong> Botão (entrada). Soltar um tiro carregado.</p></article><article class="item" id="objeto-foi-clicado-ou-tocado"><h2>Objeto foi clicado ou tocado</h2><p><strong>Quando passa:</strong> Quando o jogador clica ou toca num objeto 3D.</p><p><strong>Parâmetros e exemplo:</strong> Jogos de clicar: abrir um baú, escolher um personagem.</p></article><article class="item" id="botao-da-tela-foi-clicado"><h2>Botão da tela foi clicado</h2><p><strong>Quando passa:</strong> Quando o jogador clica num botão da Tela.</p><p><strong>Parâmetros e exemplo:</strong> Menus: Jogar, Opções, Sair.</p></article><article class="item" id="levou-dano"><h2>Levou dano</h2><p><strong>Quando passa:</strong> Uma vez para cada objeto que acabou de levar um golpe.</p><p><strong>Parâmetros e exemplo:</strong> Tocar a animação e o som de dano, mostrar a barra de vida.</p></article><article class="item" id="golpe-do-brigao-acertou"><h2>Golpe do Brigão acertou</h2><p><strong>Quando passa:</strong> Quando um golpe do Brigão acerta alguém.</p><p><strong>Parâmetros e exemplo:</strong> Efeitos de acerto e pontuação.</p></article><article class="item" id="projetil-acertou"><h2>Projétil acertou</h2><p><strong>Quando passa:</strong> Quando um projétil acerta alguém.</p><p><strong>Parâmetros e exemplo:</strong> Em (alvo). Dano de tiro, explosão no alvo.</p></article><article class="item" id="ponto-encostou-em"><h2>Ponto encostou em</h2><p><strong>Quando passa:</strong> Quando a bolinha de um Ponto do objeto começa a tocar outro objeto.</p><p><strong>Parâmetros e exemplo:</strong> Golpe que acerta no instante em que a mão encosta.</p></article><article class="item" id="a-animacao-chegou-na-marca"><h2>A animação chegou na marca</h2><p><strong>Quando passa:</strong> Quando um clipe da Linha do tempo chega a uma marca.</p><p><strong>Parâmetros e exemplo:</strong> Marca. Dar o dano no instante em que a espada desce.</p></article><article class="item" id="cutscene-acabou"><h2>Cutscene acabou</h2><p><strong>Quando passa:</strong> Quando uma cutscene termina ou é pulada.</p><p><strong>Parâmetros e exemplo:</strong> Cutscene. Devolver o controle ao jogador.</p></article><article class="item" id="a-cutscene-chegou-na-marca"><h2>A cutscene chegou na marca</h2><p><strong>Quando passa:</strong> Quando a cutscene chega a uma marca.</p><p><strong>Parâmetros e exemplo:</strong> Marca. Mostrar um texto num momento exato da cena.</p></article><article class="item" id="inimigo-viu-o-alvo"><h2>Inimigo viu o alvo</h2><p><strong>Quando passa:</strong> Na primeira vez em que o inimigo vê o alvo.</p><p><strong>Parâmetros e exemplo:</strong> Tocar um som de alerta.</p></article><article class="item" id="inimigo-comecou-a-avisar-o-ataque"><h2>Inimigo começou a avisar o ataque</h2><p><strong>Quando passa:</strong> Uma vez, quando o inimigo começa a avisar que vai atacar.</p><p><strong>Parâmetros e exemplo:</strong> Piscar ou dar a chance de o jogador desviar.</p></article><article class="item" id="inimigo-atacou"><h2>Inimigo atacou</h2><p><strong>Quando passa:</strong> A cada ataque do inimigo.</p><p><strong>Parâmetros e exemplo:</strong> Efeitos de ataque.</p></article><article class="item" id="repetir"><h2>Repetir</h2><p><strong>Quando passa:</strong> Repete as ações do evento N vezes no mesmo instante.</p><p><strong>Parâmetros e exemplo:</strong> Vezes (de 1 a 100; padrão 3). Criar 10 moedas de uma vez.</p></article><article class="item" id="so-uma-vez-enquanto-as-de-cima-valerem"><h2>Só uma vez enquanto as de cima valerem</h2><p><strong>Quando passa:</strong> Deixa o evento rodar só uma vez enquanto as condições valerem.</p><p><strong>Parâmetros e exemplo:</strong> Tocar um som só na primeira vez que o jogador entra numa área.</p></article>
+  </article>
+</div>
+</main>
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <p class="rodape-marca"><img src="/assets/img/logo-icone.png" width="28" height="28" alt="" aria-hidden="true"> <strong>Armorial</strong> versão 0.1.146. Editor de jogos com programação visual, feito para o ensino técnico.</p>
+    <p>Mantido por Diego Brandão. <a href="/privacidade/">Privacidade e LGPD</a> · <a href="/contato/">Contato</a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

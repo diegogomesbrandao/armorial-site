@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pontos a confirmar · Documentação do Armorial</title>
+<meta name="description" content="O que ainda precisa de teste prático.">
+<link rel="canonical" href="https://armorial.enginebr.workers.dev/docs/pontos-a-confirmar/">
+<meta property="og:title" content="Pontos a confirmar · Documentação do Armorial">
+<meta property="og:description" content="O que ainda precisa de teste prático.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/assets/img/logo-icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body class="">
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="/" aria-label="Armorial, página inicial"><img src="/assets/img/logo-completo.png" width="463" height="117" alt="Armorial" class="logo-cabecalho"></a>
+    <nav aria-label="Principal">
+      <ul class="menu"><li><a href="/ferramenta/">Ferramenta</a></li><li><a href="/download/">Download</a></li><li><a href="/docs/" aria-current="page">Documentação</a></li><li><a href="/galeria/">Galeria</a></li><li><a href="/noticias/">Notícias</a></li><li><a href="/contato/">Contato</a></li></ul>
+    </nav>
+    <a class="btn btn-sm" href="/download/">Baixar</a>
+  </div>
+</header>
+<main id="principal">
+
+<div class="doc wrap">
+  <aside class="doc-lateral" aria-label="Seções da documentação">
+    <label class="busca-rotulo" for="busca">Buscar na documentação</label>
+    <input id="busca" class="busca" type="search" placeholder="Ex.: Somar, Moedas, Pular" autocomplete="off" data-busca-url="/busca.json">
+    <ul class="resultados" id="resultados" hidden></ul>
+    <p class="sumario-titulo"><a href="/docs/">Documentação</a></p>
+    <nav aria-label="Sumário">
+      <ol class="sumario"><li><a href="/docs/visao-geral/">Visão geral e primeiros passos</a></li><li><a href="/docs/conceitos/">Conceitos fundamentais e interface</a></li><li><a href="/docs/comportamentos/">Comportamentos prontos</a></li><li><a href="/docs/regras/">Como as regras funcionam</a></li><li><a href="/docs/gatilhos/">Referência de gatilhos</a></li><li><a href="/docs/condicoes/">Referência de condições</a></li><li><a href="/docs/acoes/">Referência de ações</a></li><li><a href="/docs/valores-e-variaveis/">Valores, alvos e variáveis</a></li><li><a href="/docs/animacao-e-audio/">Animação, cutscenes e áudio</a></li><li><a href="/docs/modelos/">Modelos prontos</a></li><li><a href="/docs/jogar-e-exportar/">Jogar, exportar e arquivos</a></li><li><a href="/docs/glossario/">Glossário</a></li><li><a href="/docs/pontos-a-confirmar/" aria-current="page">Pontos a confirmar</a></li></ol>
+    </nav>
+  </aside>
+  <article class="doc-texto">
+    <p class="migalhas"><a href="/docs/">Documentação</a> / Pontos a confirmar</p>
+    <h1>Pontos a confirmar</h1>
+    <h2 id='pontos-a-confirmar'>19. Pontos a confirmar</h2><p>Esta documentação descreve o que o editor mostra e faz, segundo os textos, os blocos e os modelos embutidos no executável. O código-fonte não veio junto, por isso alguns pontos merecem confirmação prática:</p><ul><li>Os exemplos de uso são sugestões baseadas nas descrições do próprio editor, não testes de funcionamento.</li><li>Os nomes exatos de campos e de abas podem diferir do que aparece na tela. Não encontrei no pacote as abas Hierarquia e Inspetor, nem uma aba de Entradas. Confirme onde os controles e a árvore de objetos ficam.</li><li>Os tipos de variável usados nos modelos são todos numéricos. Confirme se o editor aceita outros tipos, como texto ou sim/não.</li><li>Os parâmetros de cada bloco foram tirados das definições do editor, mas alguns resultados (como a força de um empurrão ou a distância de detecção do inimigo) devem ser testados na prática.</li><li>Alguns gatilhos (como Começou a encostar em e Inimigo viu o alvo) foram identificados pela descrição do editor. Seus campos exatos devem ser conferidos na tela.</li><li>O LEIA-ME cita arquivos como src/runtime/scene/rendering.ts e uma decisão 43 do CLAUDE.md. Esses arquivos não estão no executável. Para a documentação técnica, vale manter a referência junto do código-fonte.</li></ul><p>Se quiser, posso aprofundar qualquer seção, criar exemplos de regras passo a passo para os alunos ou, com o código-fonte, confirmar cada item marcado acima.</p>
+  </article>
+</div>
+</main>
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <p class="rodape-marca"><img src="/assets/img/logo-icone.png" width="28" height="28" alt="" aria-hidden="true"> <strong>Armorial</strong> versão 0.1.146. Editor de jogos com programação visual, feito para o ensino técnico.</p>
+    <p>Mantido por Diego Brandão. <a href="/privacidade/">Privacidade e LGPD</a> · <a href="/contato/">Contato</a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

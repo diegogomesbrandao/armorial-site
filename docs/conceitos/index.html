@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceitos fundamentais e interface · Documentação do Armorial</title>
+<meta name="description" content="Projeto, cena, objeto, componente, evento e a interface do editor.">
+<link rel="canonical" href="https://armorial.enginebr.workers.dev/docs/conceitos/">
+<meta property="og:title" content="Conceitos fundamentais e interface · Documentação do Armorial">
+<meta property="og:description" content="Projeto, cena, objeto, componente, evento e a interface do editor.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/assets/img/logo-icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body class="">
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="/" aria-label="Armorial, página inicial"><img src="/assets/img/logo-completo.png" width="463" height="117" alt="Armorial" class="logo-cabecalho"></a>
+    <nav aria-label="Principal">
+      <ul class="menu"><li><a href="/ferramenta/">Ferramenta</a></li><li><a href="/download/">Download</a></li><li><a href="/docs/" aria-current="page">Documentação</a></li><li><a href="/galeria/">Galeria</a></li><li><a href="/noticias/">Notícias</a></li><li><a href="/contato/">Contato</a></li></ul>
+    </nav>
+    <a class="btn btn-sm" href="/download/">Baixar</a>
+  </div>
+</header>
+<main id="principal">
+
+<div class="doc wrap">
+  <aside class="doc-lateral" aria-label="Seções da documentação">
+    <label class="busca-rotulo" for="busca">Buscar na documentação</label>
+    <input id="busca" class="busca" type="search" placeholder="Ex.: Somar, Moedas, Pular" autocomplete="off" data-busca-url="/busca.json">
+    <ul class="resultados" id="resultados" hidden></ul>
+    <p class="sumario-titulo"><a href="/docs/">Documentação</a></p>
+    <nav aria-label="Sumário">
+      <ol class="sumario"><li><a href="/docs/visao-geral/">Visão geral e primeiros passos</a></li><li><a href="/docs/conceitos/" aria-current="page">Conceitos fundamentais e interface</a></li><li><a href="/docs/comportamentos/">Comportamentos prontos</a></li><li><a href="/docs/regras/">Como as regras funcionam</a></li><li><a href="/docs/gatilhos/">Referência de gatilhos</a></li><li><a href="/docs/condicoes/">Referência de condições</a></li><li><a href="/docs/acoes/">Referência de ações</a></li><li><a href="/docs/valores-e-variaveis/">Valores, alvos e variáveis</a></li><li><a href="/docs/animacao-e-audio/">Animação, cutscenes e áudio</a></li><li><a href="/docs/modelos/">Modelos prontos</a></li><li><a href="/docs/jogar-e-exportar/">Jogar, exportar e arquivos</a></li><li><a href="/docs/glossario/">Glossário</a></li><li><a href="/docs/pontos-a-confirmar/">Pontos a confirmar</a></li></ol>
+    </nav>
+  </aside>
+  <article class="doc-texto">
+    <p class="migalhas"><a href="/docs/">Documentação</a> / Conceitos fundamentais e interface</p>
+    <h1>Conceitos fundamentais e interface</h1>
+    <h2 id='conceitos-fundamentais'>3. Conceitos fundamentais</h2><div class="tabela" tabindex="0"><table><thead><tr><th scope='col'>Termo</th><th scope='col'>O que é</th></tr></thead><tbody><tr><td>Projeto</td><td>Pasta criada pelo Armorial com o jogo inteiro: cenas, moldes, regras, sons e modelos.</td></tr><tr><td>Cena</td><td>Uma fase, menu ou tela do jogo. Pode ser 2D ou 3D. Cada cena tem sua árvore de objetos e suas planilhas de eventos.</td></tr><tr><td>Objeto</td><td>Qualquer item da cena: forma, sprite, texto, câmera, luz, modelo, zona, tela ou mapa de blocos.</td></tr><tr><td>Componente</td><td>Peça que dá função a um objeto: colisor, corpo rígido, comportamento ou animador.</td></tr><tr><td>Molde (prefab)</td><td>Objeto modelo que se repete no jogo, como moeda, inimigo ou tiro. Cada cópia criada recebe as regras do molde.</td></tr><tr><td>Planilha de eventos</td><td>Conjunto de regras de uma cena, de um molde ou de um objeto específico.</td></tr><tr><td>Evento</td><td>Uma regra: um gatilho ou condições, seguidos de ações.</td></tr><tr><td>Condição</td><td>Verificação que precisa valer para a regra seguir.</td></tr><tr><td>Ação</td><td>O que a regra faz: mover, destruir, somar, tocar um som, trocar de cena.</td></tr><tr><td>Alvo</td><td>O objeto que a condição ou a ação afeta.</td></tr><tr><td>Tag</td><td>Etiqueta de texto colocada nos objetos (por exemplo, moeda ou inimigo). Permite escolher todos os objetos com a mesma etiqueta.</td></tr><tr><td>Variável</td><td>Número guardado pelo jogo, como pontos, vidas ou tempo. Pode ser global, de cena ou de objeto.</td></tr><tr><td>Entrada</td><td>Ação do jogador (andar, pular, atirar) ligada a teclas, controle ou toque.</td></tr></tbody></table></div><h2 id='interface-do-editor'>4. Interface do editor</h2><p>A coluna da esquerda reúne as abas de conteúdo do projeto.</p><div class="tabela" tabindex="0"><table><thead><tr><th scope='col'>Aba</th><th scope='col'>Para que serve</th></tr></thead><tbody><tr><td>Adicionar</td><td>Colocar formas, luzes, câmera, texto, modelos e outros objetos na cena.</td></tr><tr><td>Objetos</td><td>Ver e organizar as cenas e os objetos de cada cena.</td></tr><tr><td>Modelos</td><td>Ver os modelos 3D (.glb) do projeto.</td></tr><tr><td>Materiais</td><td>Definir cor, liso ou fosco, metal e imagens (madeira, tijolo, grama).</td></tr><tr><td>Sons</td><td>Ver os sons importados, usados pelo bloco Tocar som.</td></tr><tr><td>Moldes</td><td>Criar objetos que se repetem no jogo.</td></tr></tbody></table></div><p>Outras ferramentas identificadas no editor:</p><ul><li>Eventos: onde as regras são escritas, organizadas em grupos e com comentários. Eventos podem ser ligados ou desligados.</li><li>Animação: o Animador (máquina de estados do personagem) e a Linha do tempo (clipes com quadros-chave e marcas).</li><li>Cutscene: cenas de cinema com marcas no tempo, que podem ser puladas.</li><li>Áudio: música adaptativa e mixer, com grupos de volume, parâmetros e snapshots. Tem um tutorial de 10 passos.</li><li>Tela: elementos de interface, como painel, botão e barra.</li><li>Mapa de blocos: grade de blocos para plataformas e áreas de perigo.</li><li>Efeitos de imagem, aba Céu e ar: escolha do céu e da luz de ambiente.</li><li>Console: mostra as mensagens escritas pela ação Mostrar mensagem no Console.</li><li>Jogar: testa o jogo dentro do editor. Exportar: gera o arquivo HTML.</li></ul><h2 id='objetos-da-cena'>5. Objetos da cena</h2><div class="tabela" tabindex="0"><table><thead><tr><th scope='col'>Tipo</th><th scope='col'>Para que serve</th><th scope='col'>Destaques</th></tr></thead><tbody><tr><td>Primitiva</td><td>Forma simples</td><td>Caixa, esfera, plano, cilindro, cápsula e cone. Aceita cor, brilho e metal.</td></tr><tr><td>Grupo</td><td>Agrupa objetos</td><td>Mover ou girar o grupo afeta os objetos dentro dele.</td></tr><tr><td>Texto</td><td>Escrever na cena</td><td>Cor, tamanho, âncora, começar escondido e mostrar o valor de uma variável.</td></tr><tr><td>Sprite</td><td>Imagem 2D</td><td>Quadros de animação, espelhamento, camadas e modo pixel art.</td></tr><tr><td>Câmera</td><td>O que o jogador vê</td><td>Perspectiva ou ortográfica. Pode seguir um objeto.</td></tr><tr><td>Luz</td><td>Iluminação</td><td>Luz direcional com cor e intensidade.</td></tr><tr><td>Modelo</td><td>Modelo 3D (.glb)</td><td>Pode trazer animações do próprio arquivo.</td></tr><tr><td>Gatilho</td><td>Zona invisível</td><td>Detecta quando algo entra nela, usando colisor.</td></tr><tr><td>Tela (UI)</td><td>Interface sobre o jogo</td><td>Painel, botão e barra. A barra pode ler uma variável.</td></tr><tr><td>Mapa de blocos</td><td>Cenário em grade</td><td>Cada bloco tem um tipo: perigo, sólido, plataforma ou sem colisão.</td></tr></tbody></table></div><p>Todo objeto tem posição, rotação, escala e tags.</p><h2 id='componentes'>6. Componentes</h2><div class="tabela" tabindex="0"><table><thead><tr><th scope='col'>Componente</th><th scope='col'>Função</th></tr></thead><tbody><tr><td>Colisor</td><td>Define a área que encosta em outros objetos. Formas: caixa, esfera, cápsula ou formato do modelo. Marcado como sensor, detecta o contato sem bloquear a passagem.</td></tr><tr><td>Corpo rígido</td><td>Faz o objeto obedecer à física: massa, atrito, escala de gravidade e forma. As ações de física (pular, empurrar, derrubar) dependem dele.</td></tr><tr><td>Comportamento</td><td>Dá ao objeto um comportamento pronto (seção 7), com seus ajustes.</td></tr><tr><td>Animador</td><td>Controla as animações do personagem com estados, transições e parâmetros.</td></tr><tr><td>Partículas</td><td>Efeito contínuo, como fumaça, fogo ou chuva. As ações de partículas agem sobre ele.</td></tr></tbody></table></div><p>Algumas ações exigem um comportamento específico. Por exemplo, Planar só funciona com o comportamento Personagem de plataforma, e o editor avisa quando essa condição não é atendida.</p>
+  </article>
+</div>
+</main>
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <p class="rodape-marca"><img src="/assets/img/logo-icone.png" width="28" height="28" alt="" aria-hidden="true"> <strong>Armorial</strong> versão 0.1.146. Editor de jogos com programação visual, feito para o ensino técnico.</p>
+    <p>Mantido por Diego Brandão. <a href="/privacidade/">Privacidade e LGPD</a> · <a href="/contato/">Contato</a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

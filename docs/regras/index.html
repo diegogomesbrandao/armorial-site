@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como as regras funcionam · Documentação do Armorial</title>
+<meta name="description" content="Eventos, condições, ações e escopo.">
+<link rel="canonical" href="https://armorial.enginebr.workers.dev/docs/regras/">
+<meta property="og:title" content="Como as regras funcionam · Documentação do Armorial">
+<meta property="og:description" content="Eventos, condições, ações e escopo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/assets/img/logo-icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body class="">
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="/" aria-label="Armorial, página inicial"><img src="/assets/img/logo-completo.png" width="463" height="117" alt="Armorial" class="logo-cabecalho"></a>
+    <nav aria-label="Principal">
+      <ul class="menu"><li><a href="/ferramenta/">Ferramenta</a></li><li><a href="/download/">Download</a></li><li><a href="/docs/" aria-current="page">Documentação</a></li><li><a href="/galeria/">Galeria</a></li><li><a href="/noticias/">Notícias</a></li><li><a href="/contato/">Contato</a></li></ul>
+    </nav>
+    <a class="btn btn-sm" href="/download/">Baixar</a>
+  </div>
+</header>
+<main id="principal">
+
+<div class="doc wrap">
+  <aside class="doc-lateral" aria-label="Seções da documentação">
+    <label class="busca-rotulo" for="busca">Buscar na documentação</label>
+    <input id="busca" class="busca" type="search" placeholder="Ex.: Somar, Moedas, Pular" autocomplete="off" data-busca-url="/busca.json">
+    <ul class="resultados" id="resultados" hidden></ul>
+    <p class="sumario-titulo"><a href="/docs/">Documentação</a></p>
+    <nav aria-label="Sumário">
+      <ol class="sumario"><li><a href="/docs/visao-geral/">Visão geral e primeiros passos</a></li><li><a href="/docs/conceitos/">Conceitos fundamentais e interface</a></li><li><a href="/docs/comportamentos/">Comportamentos prontos</a></li><li><a href="/docs/regras/" aria-current="page">Como as regras funcionam</a></li><li><a href="/docs/gatilhos/">Referência de gatilhos</a></li><li><a href="/docs/condicoes/">Referência de condições</a></li><li><a href="/docs/acoes/">Referência de ações</a></li><li><a href="/docs/valores-e-variaveis/">Valores, alvos e variáveis</a></li><li><a href="/docs/animacao-e-audio/">Animação, cutscenes e áudio</a></li><li><a href="/docs/modelos/">Modelos prontos</a></li><li><a href="/docs/jogar-e-exportar/">Jogar, exportar e arquivos</a></li><li><a href="/docs/glossario/">Glossário</a></li><li><a href="/docs/pontos-a-confirmar/">Pontos a confirmar</a></li></ol>
+    </nav>
+  </aside>
+  <article class="doc-texto">
+    <p class="migalhas"><a href="/docs/">Documentação</a> / Como as regras funcionam</p>
+    <h1>Como as regras funcionam</h1>
+    <h2 id='como-as-regras-funcionam'>8. Como as regras funcionam</h2><p>Cada regra é um evento. Ele tem um gatilho ou uma lista de condições e, em seguida, uma lista de ações. Quando as condições valem, as ações rodam em ordem, de cima para baixo. Por padrão, todas as condições precisam valer ao mesmo tempo. Para aceitar qualquer uma delas, use a condição Ao menos uma das condições de dentro vale.</p><p>Existem dois tipos de verificação, e confundi-los é o erro mais comum de iniciantes.</p><p>O gatilho passa uma vez, no instante em que o fato acontece. Exemplo: Começou a encostar em.</p><p>A condição vale enquanto a situação durar. Exemplo: Botão está segurado, ou Está no chão.</p><p>Um evento formado só por condições de estado roda a cada quadro, cerca de 60 vezes por segundo, enquanto as condições valerem. Para que a ação aconteça uma única vez, use Só uma vez enquanto as de cima valerem.</p><p>As ações rodam uma depois da outra. O bloco Esperar N segundos pausa as ações seguintes. O bloco Repetir faz as ações do evento rodarem N vezes no mesmo instante.</p><p>Cada ação ou condição de objeto informa o alvo, ou seja, a quem se aplica. O alvo pode ser o próprio objeto (em planilhas de objeto), um objeto escolhido, todos os objetos com uma tag, ou o objeto escolhido por uma condição anterior, como a moeda que o herói acabou de tocar.</p><p>A planilha tem um escopo. Uma planilha de cena vale durante a fase inteira. Uma planilha de molde vale para cada cópia criada. Uma planilha de objeto vale só para aquele objeto.</p><p>Eventos podem ser organizados em grupos e comentados. A ação Ligar ou desligar grupo liga ou desliga um conjunto inteiro de regras durante o jogo, o que permite, por exemplo, usar regras diferentes na fase 2.</p><p>Exemplo do modelo Plataforma 2D: quando o herói começa a encostar num objeto com a tag moeda, o objeto encostado é destruído, a variável Moedas soma 1 e toca o som moeda. Essa regra inteira cabe em três blocos de ação, e é um bom ponto de partida para entender a lógica do editor.</p>
+  </article>
+</div>
+</main>
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <p class="rodape-marca"><img src="/assets/img/logo-icone.png" width="28" height="28" alt="" aria-hidden="true"> <strong>Armorial</strong> versão 0.1.146. Editor de jogos com programação visual, feito para o ensino técnico.</p>
+    <p>Mantido por Diego Brandão. <a href="/privacidade/">Privacidade e LGPD</a> · <a href="/contato/">Contato</a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

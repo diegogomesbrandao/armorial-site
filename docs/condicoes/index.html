@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referência de condições · Documentação do Armorial</title>
+<meta name="description" content="Verificações que valem enquanto a situação durar.">
+<link rel="canonical" href="https://armorial.enginebr.workers.dev/docs/condicoes/">
+<meta property="og:title" content="Referência de condições · Documentação do Armorial">
+<meta property="og:description" content="Verificações que valem enquanto a situação durar.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/assets/img/logo-icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body class="">
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="/" aria-label="Armorial, página inicial"><img src="/assets/img/logo-completo.png" width="463" height="117" alt="Armorial" class="logo-cabecalho"></a>
+    <nav aria-label="Principal">
+      <ul class="menu"><li><a href="/ferramenta/">Ferramenta</a></li><li><a href="/download/">Download</a></li><li><a href="/docs/" aria-current="page">Documentação</a></li><li><a href="/galeria/">Galeria</a></li><li><a href="/noticias/">Notícias</a></li><li><a href="/contato/">Contato</a></li></ul>
+    </nav>
+    <a class="btn btn-sm" href="/download/">Baixar</a>
+  </div>
+</header>
+<main id="principal">
+
+<div class="doc wrap">
+  <aside class="doc-lateral" aria-label="Seções da documentação">
+    <label class="busca-rotulo" for="busca">Buscar na documentação</label>
+    <input id="busca" class="busca" type="search" placeholder="Ex.: Somar, Moedas, Pular" autocomplete="off" data-busca-url="/busca.json">
+    <ul class="resultados" id="resultados" hidden></ul>
+    <p class="sumario-titulo"><a href="/docs/">Documentação</a></p>
+    <nav aria-label="Sumário">
+      <ol class="sumario"><li><a href="/docs/visao-geral/">Visão geral e primeiros passos</a></li><li><a href="/docs/conceitos/">Conceitos fundamentais e interface</a></li><li><a href="/docs/comportamentos/">Comportamentos prontos</a></li><li><a href="/docs/regras/">Como as regras funcionam</a></li><li><a href="/docs/gatilhos/">Referência de gatilhos</a></li><li><a href="/docs/condicoes/" aria-current="page">Referência de condições</a></li><li><a href="/docs/acoes/">Referência de ações</a></li><li><a href="/docs/valores-e-variaveis/">Valores, alvos e variáveis</a></li><li><a href="/docs/animacao-e-audio/">Animação, cutscenes e áudio</a></li><li><a href="/docs/modelos/">Modelos prontos</a></li><li><a href="/docs/jogar-e-exportar/">Jogar, exportar e arquivos</a></li><li><a href="/docs/glossario/">Glossário</a></li><li><a href="/docs/pontos-a-confirmar/">Pontos a confirmar</a></li></ol>
+    </nav>
+  </aside>
+  <article class="doc-texto">
+    <p class="migalhas"><a href="/docs/">Documentação</a> / Referência de condições</p>
+    <h1>Referência de condições</h1>
+    <p>Condições são verificações que valem enquanto a situação durar. Elas podem ser combinadas no mesmo evento. Quando há o campo É ou Como, ele define a comparação usada (=, !=, &lt;, &gt;, &lt;= ou &gt;=).</p><article class="item" id="parametro-do-animador"><p class="grupo-rotulo">Animação</p><h2>Parâmetro do Animador</h2><p>Compara um parâmetro do Animador com um valor.</p></article><article class="item" id="gatilho-do-animador-foi-ativado"><p class="grupo-rotulo">Animação</p><h2>Gatilho do Animador foi ativado</h2><p>Vale se um gatilho foi ativado e ainda não foi usado.</p></article><article class="item" id="esta-invulneravel"><p class="grupo-rotulo">Combate</p><h2>Está invulnerável</h2><p>Vale logo depois de levar dano.</p></article><article class="item" id="esta-sem-controle-atordoado"><p class="grupo-rotulo">Combate</p><h2>Está sem controle (atordoado)</h2><p>Vale enquanto o golpe deixa o objeto sem controle.</p></article><article class="item" id="cutscene-esta-tocando"><p class="grupo-rotulo">Cutscene</p><h2>Cutscene está tocando</h2><p>Vale enquanto a cutscene escolhida toca.</p></article><article class="item" id="botao-esta-segurado"><p class="grupo-rotulo">Entrada</p><h2>Botão está segurado</h2><p>Vale o tempo todo em que o botão está pressionado.</p></article><article class="item" id="esta-no-ar"><p class="grupo-rotulo">Física</p><h2>Está no ar</h2><p>Vale quando o objeto está subindo ou caindo.</p></article><article class="item" id="esta-no-chao"><p class="grupo-rotulo">Física</p><h2>Está no chão</h2><p>Vale quando o objeto está pisando no chão.</p></article><article class="item" id="esta-derrubado"><p class="grupo-rotulo">Física</p><h2>Está derrubado</h2><p>Vale enquanto o objeto está caído por um tombo.</p></article><article class="item" id="esta-se-movendo"><p class="grupo-rotulo">Física</p><h2>Está se movendo</h2><p>Vale quando a velocidade passa de um valor (padrão 0,5 m/s).</p></article><article class="item" id="esta-dentro-de-bloco-do-tipo"><p class="grupo-rotulo">Física</p><h2>Está dentro de bloco do tipo</h2><p>Vale enquanto o objeto está dentro de um bloco do Mapa de blocos (perigo, sólido, plataforma ou sem colisão).</p></article><article class="item" id="esta-perseguindo"><p class="grupo-rotulo">Inimigo</p><h2>Está perseguindo</h2><p>Vale enquanto o inimigo persegue alguém.</p></article><article class="item" id="esta-avisando-o-ataque"><p class="grupo-rotulo">Inimigo</p><h2>Está avisando o ataque</h2><p>Vale enquanto o inimigo se prepara para atacar.</p></article><article class="item" id="propriedade-do-objeto"><p class="grupo-rotulo">Objetos</p><h2>Propriedade do objeto</h2><p>Escolhe os objetos cuja propriedade (posição, giro, tamanho) passa na comparação. Ex.: quem caiu abaixo de -10 no eixo Y.</p></article><article class="item" id="esta-perto-de"><p class="grupo-rotulo">Objetos</p><h2>Está perto de</h2><p>Vale quando um objeto está até N metros de outro (padrão 3 m).</p></article><article class="item" id="escolher-o-mais-perto-de"><p class="grupo-rotulo">Objetos</p><h2>Escolher o mais perto de</h2><p>Escolhe o objeto mais próximo de outro.</p></article><article class="item" id="escolher-um-aleatorio"><p class="grupo-rotulo">Objetos</p><h2>Escolher um aleatório</h2><p>Escolhe um objeto ao acaso entre os do evento.</p></article><article class="item" id="ponto-esta-encostando-em"><p class="grupo-rotulo">Objetos</p><h2>Ponto está encostando em</h2><p>Vale enquanto o Ponto do objeto toca outro objeto.</p></article><article class="item" id="quantidade-de-objetos-com-a-tag"><p class="grupo-rotulo">Objetos</p><h2>Quantidade de objetos com a tag</h2><p>Compara quantos objetos têm uma tag. Ex.: ganhar quando não sobra inimigo.</p></article><article class="item" id="esta-animando-tween"><p class="grupo-rotulo">Objetos</p><h2>Está animando (tween)</h2><p>Vale enquanto o objeto está numa animação de propriedade.</p></article><article class="item" id="musica-esta-na-secao"><p class="grupo-rotulo">Som</p><h2>Música está na seção</h2><p>Vale enquanto a música adaptativa está na seção escolhida (Exploração, Perseguição...).</p></article><article class="item" id="evento-de-audio-esta-tocando"><p class="grupo-rotulo">Som</p><h2>Evento de áudio está tocando</h2><p>Vale enquanto o evento de áudio toca.</p></article><article class="item" id="snapshot-de-audio-esta-ligado"><p class="grupo-rotulo">Som</p><h2>Snapshot de áudio está ligado</h2><p>Vale enquanto o snapshot está ativo.</p></article><article class="item" id="som-esta-tocando"><p class="grupo-rotulo">Som</p><h2>Som está tocando</h2><p>Vale enquanto o som escolhido toca.</p></article><article class="item" id="comparar-valores"><p class="grupo-rotulo">Variáveis</p><h2>Comparar valores</h2><p>Compara dois valores quaisquer: variável, posição, conta ou sorteio.</p></article><article class="item" id="variavel-comparada-com"><p class="grupo-rotulo">Variáveis</p><h2>Variável comparada com</h2><p>Compara uma variável com um valor. Ex.: vencer com 10 moedas.</p></article><article class="item" id="variavel-do-objeto-comparada-com"><p class="grupo-rotulo">Variáveis do objeto</p><h2>Variável do objeto comparada com</h2><p>Escolhe os objetos cuja variável própria passa na comparação. Ex.: o inimigo morre quando a vida chega a 0.</p></article><article class="item" id="ao-menos-uma-das-condicoes-de-dentro-vale"><p class="grupo-rotulo">Lógica</p><h2>Ao menos uma das condições de dentro vale</h2><p>Vale se pelo menos uma das condições internas valer.</p></article>
+  </article>
+</div>
+</main>
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <p class="rodape-marca"><img src="/assets/img/logo-icone.png" width="28" height="28" alt="" aria-hidden="true"> <strong>Armorial</strong> versão 0.1.146. Editor de jogos com programação visual, feito para o ensino técnico.</p>
+    <p>Mantido por Diego Brandão. <a href="/privacidade/">Privacidade e LGPD</a> · <a href="/contato/">Contato</a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

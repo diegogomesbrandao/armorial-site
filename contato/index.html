@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contato · Armorial</title>
+<meta name="description" content="Fale com a equipe do Armorial ou peça material para a sua aula.">
+<link rel="canonical" href="https://armorial.enginebr.workers.dev/contato/">
+<meta property="og:title" content="Contato · Armorial">
+<meta property="og:description" content="Fale com a equipe do Armorial ou peça material para a sua aula.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/assets/img/logo-icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body class="">
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="/" aria-label="Armorial, página inicial"><img src="/assets/img/logo-completo.png" width="463" height="117" alt="Armorial" class="logo-cabecalho"></a>
+    <nav aria-label="Principal">
+      <ul class="menu"><li><a href="/ferramenta/">Ferramenta</a></li><li><a href="/download/">Download</a></li><li><a href="/docs/">Documentação</a></li><li><a href="/galeria/">Galeria</a></li><li><a href="/noticias/">Notícias</a></li><li><a href="/contato/" aria-current="page">Contato</a></li></ul>
+    </nav>
+    <a class="btn btn-sm" href="/download/">Baixar</a>
+  </div>
+</header>
+<main id="principal">
+
+<article class="texto wrap">
+  <h1>Contato</h1>
+  <p class="lead">Dúvida sobre o Armorial, uma parceria ou uma aula? Escreva aqui.</p>
+  <form class="form" action="https://formspree.io/f/SEU_ID" method="post">
+    <div class="campo"><label for="nome">Nome</label><input id="nome" name="nome" type="text" autocomplete="name" required></div>
+    <div class="campo"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+    <div class="campo"><label for="instituicao">Instituição <span class="opc">(opcional)</span></label><input id="instituicao" name="instituicao" type="text" autocomplete="organization"></div>
+    <div class="campo"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" rows="6" required></textarea></div>
+    <div class="campo marcar"><input id="material" name="pedido_material" type="checkbox"><label for="material">Quero material de apoio para a aula</label></div>
+    <div class="campo marcar"><input id="consent" name="consentimento" type="checkbox" required><label for="consent">Concordo que a equipe use meus dados para responder este contato, conforme o <a href="/privacidade/">aviso de privacidade</a>.</label></div>
+    <button class="btn" type="submit">Enviar mensagem</button>
+  </form>
+  <p class="pendente" role="note"><strong>A confirmar:</strong> endereço de envio do formulário. Configure um serviço gratuito de formulários em site.json (form_action) antes de publicar.</p>
+</article>
+
+</main>
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <p class="rodape-marca"><img src="/assets/img/logo-icone.png" width="28" height="28" alt="" aria-hidden="true"> <strong>Armorial</strong> versão 0.1.146. Editor de jogos com programação visual, feito para o ensino técnico.</p>
+    <p>Mantido por Diego Brandão. <a href="/privacidade/">Privacidade e LGPD</a> · <a href="/contato/">Contato</a></p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

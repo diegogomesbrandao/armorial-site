@@ -191,5 +191,34 @@
   </div>
 </footer>
 <script src="/assets/site.js" defer></script>
+<dialog id="zoom" class="zoom" aria-label="Imagem ampliada">
+  <button type="button" class="zoom-fechar" aria-label="Fechar">×</button>
+  <img id="zoom-img" src="" alt="">
+</dialog>
+
+<style>
+  .zoom { border: 0; padding: 0; background: transparent; max-width: 95vw; max-height: 95vh; }
+  .zoom::backdrop { background: rgba(0, 0, 0, .85); }
+  .zoom img { display: block; max-width: 95vw; max-height: 90vh; border-radius: 6px; cursor: zoom-out; }
+  .zoom-fechar { position: absolute; top: 8px; right: 8px; background: #000a; color: #fff; border: 0; border-radius: 50%; width: 36px; height: 36px; font-size: 22px; cursor: pointer; }
+  .grade-editor figure img { cursor: zoom-in; }
+</style>
+
+<script>
+  const zoom = document.getElementById('zoom');
+  const zoomImg = document.getElementById('zoom-img');
+
+  document.querySelectorAll('.grade-editor figure img').forEach(img => {
+    img.addEventListener('click', () => {
+      zoomImg.src = img.src;
+      zoomImg.alt = img.alt;
+      zoom.showModal();
+    });
+  });
+
+  zoom.addEventListener('click', e => { if (e.target === zoom) zoom.close(); });
+  zoom.querySelector('.zoom-fechar').addEventListener('click', () => zoom.close());
+  zoomImg.addEventListener('click', () => zoom.close());
+</script>
 </body>
 </html>
